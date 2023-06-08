@@ -1,4 +1,4 @@
-# OverTheWire: Bandit
+# OverTheWire: Bandit Overview
 
 ## Bandit <a href="#bandit" id="bandit"></a>
 
@@ -21,5 +21,3 @@ You’re ready to start! Begin with [Level 0](https://overthewire.org/wargames/b
 
 **Note for VMs:** You may fail to connect to overthewire.org via SSH with a “_broken pipe error_” when the network adapter for the VM is configured to use NAT mode. Adding the setting **`IPQoS throughput`** to `/etc/ssh/ssh_config` should resolve the issue. If this does not solve your issue, the only option then is to change the adapter to Bridged mode.
 
-[\
-](https://overthewire.org/information/donate.html)
