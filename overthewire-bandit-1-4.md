@@ -5,11 +5,9 @@ coverY: 0
 
 # OverTheWire: Bandit 0→4
 
-OverTheWire is a free, online platform that presents a variety of cybersecurity challenges. Being somewhat new to the field, I thought a writeup/blog would be a great way to document my journey through the website. Hopefully writing this blog will push me to understand why I am performing certain actions and when to perform them. This specific write up will be regarding one of their “Wargames” titled Bandit, which is said to be for absolute beginners.&#x20;
-
 ## **Bandit Level 0:**
 
-**Level Goal:** The goal of this level is for you to log into the game using SSH. The host to which you need to connect is bandit.labs.overthewire.org, on port 2220. The username is bandit0 and the password is bandit0. Once logged in, go to the Level 1 page to find out how to beat Level 1.&#x20;
+**Level Goal:** The goal of this level is for you to log into the game using SSH. The host to which you need to connect is bandit.labs.overthewire.org, on port 2220. The username is bandit0 and the password is bandit0. Once logged in, go to the Level 1 page to find out how to beat Level 1.
 
 This level seems simple enough, SSH, also known as the Secure Shell, is a network protocol that allows two systems to communicate with each other. To utilize SSH, you type “ssh” into your terminal followed by a command.
 
