@@ -1,6 +1,6 @@
 # Table of contents
 
-* [OverTheWire: Bandit 0→4](overthewire-bandit-1-4)
+* [OverTheWire: Bandit 0→4](overthewire-bandit-1-4.md)
 * [OverTheWire: Bandit 5→9](overthewire-bandit-5-9.md)
 * [OverTheWire: Bandit 10→14](overthewire-bandit-10-14.md)
 * [OverTheWire: Bandit 15→19](overthewire-bandit-15-19.md)
