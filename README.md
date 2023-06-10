@@ -1,23 +1,108 @@
-# OverTheWire: Bandit Overview
+---
+cover: .gitbook/assets/overthewire-logo.jpg
+coverY: 0
+---
 
-## Bandit <a href="#bandit" id="bandit"></a>
+# OverTheWire: Bandit 0→4
 
-The Bandit wargame is aimed at absolute beginners. It will teach the basics needed to be able to play other wargames. **If you notice something essential is missing or have ideas for new levels, please let us know!**
+## **Bandit Level 0:**
 
-### Note for beginners <a href="#note-for-beginners" id="note-for-beginners"></a>
+**Level Goal:** The goal of this level is for you to log into the game using SSH. The host to which you need to connect is bandit.labs.overthewire.org, on port 2220. The username is bandit0 and the password is bandit0. Once logged in, go to the Level 1 page to find out how to beat Level 1.
 
-This game, like most other games, is organised in levels. You start at Level 0 and try to “beat” or “finish” it. Finishing a level results in information on how to start the next level. The pages on this website for “Level \<X>” contain information on how to start level X from the previous level. E.g. The page for [Level 1](https://overthewire.org/wargames/bandit/bandit1.html) has information on how to gain access from [Level 0](https://overthewire.org/wargames/bandit/bandit0.html) to [Level 1](https://overthewire.org/wargames/bandit/bandit1.html). All levels in this game have a page on this website, and they are all linked to from the sidemenu on the left of this page.
+This level seems simple enough, SSH, also known as the Secure Shell, is a network protocol that allows two systems to communicate with each other. To utilize SSH, you type “ssh” into your terminal followed by a command.
 
-You will encounter many situations in which you have no idea what you are supposed to do. **Don’t panic! Don’t give up!** The purpose of this game is for you to learn the basics. Part of learning the basics, is reading a lot of new information. If you’ve never used the command line before, a good first read is this [introduction to user commands](https://man7.org/linux/man-pages/man1/intro.1.html).
+To connect to the bandit 0 game, enter this command to your terminal (ssh bandit0@bandit.labs.overthewire.org -p 2220):
 
-There are several things you can try when you are unsure how to continue:
+<figure><img src=".gitbook/assets/Bandit0-1 (1).png" alt=""><figcaption></figcaption></figure>
 
-* First, if you know a command, but don’t know how to use it, try the **manual** ([man page](https://en.wikipedia.org/wiki/Man\_page)) by entering **man \<command>**. For example, **man ls** to learn about the “ls” command. The “man” command also has a manual, try it! When using **man**, press `q` to quit (you can also use `/` and `n` and `N` to search).
-* Second, if there is no man page, the command might be a **shell built-in**. In that case use the “**help \<X>**” command. E.g. help cd
-* Also, your favorite **search-engine** is your friend. Learn how to use it! I recommend [Google](https://www.google.com/).
-* Lastly, if you are still stuck, you can [join us via chat](https://overthewire.org/information/chat.html)
+This command sends a request through the ssh to log into a remote machine called bandit.labs.overthewire.org, with the specific username “bandit0” additionally, using the –p flag to specify the port number.
 
-You’re ready to start! Begin with [Level 0](https://overthewire.org/wargames/bandit/bandit0.html), linked at the left of this page. Good luck!
+From here on, you can enter the password provided by the level.
 
-**Note for VMs:** You may fail to connect to overthewire.org via SSH with a “_broken pipe error_” when the network adapter for the VM is configured to use NAT mode. Adding the setting **`IPQoS throughput`** to `/etc/ssh/ssh_config` should resolve the issue. If this does not solve your issue, the only option then is to change the adapter to Bridged mode.
+Upon entering the password, you are flooded with a ton of information regarding the machine, but more importantly, you’ve completed the first level in OverTheWire’s beginner wargame!
 
+<figure><img src=".gitbook/assets/Bandit0-2 (1).png" alt=""><figcaption></figcaption></figure>
+
+## Bandit Level 0 → 1:
+
+**Level Goal:** The password for the next level is stored in a file called readme located in the home directory. Use this password to log into bandit1 using SSH. Whenever you find a password for a level, use SSH (on port 2220) to log into that level and continue the game.
+
+This level requires you to traverse the machine to locate a readme file. To do so, type the “ls” command to list the contents of the directory you are currently in.
+
+<figure><img src=".gitbook/assets/Bandit1-1.png" alt=""><figcaption></figcaption></figure>
+
+Upon entering the command, you can observe the readme file. From there, use the “cat” command followed by the title of the text file you wish to concatenate.
+
+{% hint style="info" %}
+Tip: When specifying the names of files in the command line, you can press “tab” to autocomplete the title specification.
+{% endhint %}
+
+<figure><img src=".gitbook/assets/Bandit1-2.png" alt=""><figcaption></figcaption></figure>
+
+In doing so, you are given the password to the next machine! Make sure to copy this to your clipboard, or anywhere you can access again.
+
+<details>
+
+<summary>Password:</summary>
+
+NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL
+
+</details>
+
+## Bandit Level 1 → 2:
+
+**Level Goal:** The password for the next level is stored in a file called - located in the home directory
+
+This level builds upon the previous ones, first, we will have to log into the bandit1 machine using the following command (ssh bandit1@bandit.labs.overthewire.org -p 2220):
+
+<figure><img src=".gitbook/assets/Bandit2-1.png" alt=""><figcaption></figcaption></figure>
+
+Now copy the password from the previous machine, using ctrl + shift + c, unlike the standard shortcut, to copy a string of text, in the terminal, we include a shift to differentiate the shortcut from “ctrl + c” a terminal command that terminates any running program. Upon copying the password, you will now have to paste it into the password prompt using the ctrl + shift + v shortcut. Having made it into the machine, we must find the “-” file.
+
+Using the ls command, we can see that the file is in the directory we are currently in, but as you notice, in attempting to concatenate (cat) the file, nothing happens. To access files with special characters we will need to utilize the “. /” command which uses an explicit path to the file.
+
+And again, we get the password for the next level.
+
+<figure><img src=".gitbook/assets/Bandit2-2.png" alt=""><figcaption></figcaption></figure>
+
+<details>
+
+<summary>Password:</summary>
+
+rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi
+
+</details>
+
+## Bandit Level 2 → 3:
+
+**Level Goal:** The password for the next level is stored in a file called spaces in this filename located in the home directory
+
+This level, like the last, asks us to access a file named “spaces in this filename”. Upon logging into the machine and listing its files, the file we need is directly in front of us.
+
+<figure><img src=".gitbook/assets/Bandit3-1.png" alt=""><figcaption></figcaption></figure>
+
+To cat this file, we will need to put the full name of the file in quotes like so:
+
+<figure><img src=".gitbook/assets/Bandit3-2.png" alt=""><figcaption></figcaption></figure>
+
+And we are given the password for the next level!
+
+<details>
+
+<summary>Password:</summary>
+
+aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
+
+</details>
+
+## Bandit Level 3 → 4:
+
+Level Goal: The password for the next level is stored in a hidden file in the “inhere” directory.
+
+Similar to the last, this level asks us to find a hidden file. This is easy, cd into the “inhere” directory and use the “ls” command to list the files within the directory. Additionally, use the "file ./\*" command to search and display the files and file types in the directory.
+
+<figure><img src=".gitbook/assets/Bandit4-2 (1).png" alt=""><figcaption></figcaption></figure>
+
+Now that we have revealed the hidden directory, we can cat the file with the following command:
+
+<figure><img src=".gitbook/assets/Bandit4-3.png" alt=""><figcaption></figcaption></figure>
